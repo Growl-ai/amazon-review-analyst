@@ -10,7 +10,7 @@
 用户只需输入一个亚马逊商品的 ASIN（或本地 CSV 文件），系统便能自动完成从**数据爬取、标签体系构建、逐条语义打标、多维交叉分析、文本聚类**到**最终可视化 HTML 报告生成**的端到端全链路工作。
 
 👉 **[在线查看自动生成的洞察报告大屏 ](https://growl-ai.github.io/amazon-review-analyst/result/report.html)** 
-*(提示：请在此处替换为你实际的 GitHub Pages 链接)*
+
 
 ---
 
@@ -95,7 +95,7 @@ TAGGING_MODE=sequential
 ### 3. 运行工作流
 ```bash
 cd amazon-review-analyst
-python graph.py
+python src/main.py
 ```
 运行结束后，所有生成的图表、Markdown 报告及最终的 HTML 看板均保存在 `output/` 目录下。
 
@@ -113,6 +113,6 @@ review-analyst/
 ├── charts.py           # 原生 SVG 图表生成工具
 ├── cache_store.py      # 断点续跑与本地 JSONL 缓存管理
 ├── report_export.py    # 产物落盘与 HTML/SVG 动态拼装
-├── main.py
+├── main.py             # 主程序入口，协调所有组件运行
 └── output/             # 生成产物目录 (HTML大屏、MD报告、SVG图表)
 ```
