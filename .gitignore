@@ -1,3 +1,5 @@
- cache/
- analysis.md
- tagged.csv
+output/
+cache/
+analysis.md
+tagged.csv
+__pycache__/
