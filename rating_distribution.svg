@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="360" viewBox="0 0 900 360">
+<rect width="100%" height="100%" fill="white"/>
+<text x="220" y="28" font-size="18" font-family="sans-serif" fill="#111">评分分布（评论数）</text>
+<text x="210" y="86.0" text-anchor="end" font-size="12" font-family="sans-serif" fill="#333">5★</text>
+<rect x="220" y="65.05" width="652.0" height="31.900000000000002" fill="#4F8DF7" rx="4" ry="4"/>
+<text x="880.0" y="86.0" font-size="12" font-family="sans-serif" fill="#111">71</text>
+<text x="210" y="144.0" text-anchor="end" font-size="12" font-family="sans-serif" fill="#333">4★</text>
+<rect x="220" y="123.05" width="229.57746478873239" height="31.900000000000002" fill="#4F8DF7" rx="4" ry="4"/>
+<text x="457.5774647887324" y="144.0" font-size="12" font-family="sans-serif" fill="#111">25</text>
+<text x="210" y="202.0" text-anchor="end" font-size="12" font-family="sans-serif" fill="#333">3★</text>
+<rect x="220" y="181.05" width="211.21126760563382" height="31.900000000000002" fill="#4F8DF7" rx="4" ry="4"/>
+<text x="439.2112676056338" y="202.0" font-size="12" font-family="sans-serif" fill="#111">23</text>
+<text x="210" y="260.0" text-anchor="end" font-size="12" font-family="sans-serif" fill="#333">2★</text>
+<rect x="220" y="239.05" width="183.66197183098592" height="31.900000000000002" fill="#4F8DF7" rx="4" ry="4"/>
+<text x="411.6619718309859" y="260.0" font-size="12" font-family="sans-serif" fill="#111">20</text>
+<text x="210" y="318.0" text-anchor="end" font-size="12" font-family="sans-serif" fill="#333">1★</text>
+<rect x="220" y="297.05" width="101.01408450704224" height="31.900000000000002" fill="#4F8DF7" rx="4" ry="4"/>
+<text x="329.01408450704224" y="318.0" font-size="12" font-family="sans-serif" fill="#111">11</text>
+</svg>

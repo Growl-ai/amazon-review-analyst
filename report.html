@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon 评论洞察报告 - Pet Sling Carrier</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            background-color: #0b1220;
+            color: #e2e8f0;
+            font-family: 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', sans-serif;
+            background-image: radial-gradient(circle at 50% 0%, #1e293b 0%, transparent 70%);
+        }
+        .card {
+            background-color: rgba(42, 54, 84, 0.7);
+            backdrop-filter: blur(10px);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(96, 165, 250, 0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+            border-color: rgba(96, 165, 250, 0.3);
+        }
+        .tag-pill {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.35rem 0.85rem;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            font-weight: 500;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+            border: 1px solid;
+            transition: all 0.2s ease;
+        }
+        .tag-pill:hover {
+            filter: brightness(1.1);
+            transform: scale(1.02);
+        }
+        .tag-pill-count {
+            background-color: rgba(255,255,255,0.2);
+            border-radius: 9999px;
+            padding: 0.1rem 0.5rem;
+            font-size: 0.75rem;
+            margin-left: 0.5rem;
+        }
+        
+        .tag-group-1 { background-color: rgba(239, 68, 68, 0.15); border-color: rgba(239, 68, 68, 0.4); color: #fca5a5; }
+        .tag-group-2 { background-color: rgba(59, 130, 246, 0.15); border-color: rgba(59, 130, 246, 0.4); color: #93c5fd; }
+        .tag-group-3 { background-color: rgba(16, 185, 129, 0.15); border-color: rgba(16, 185, 129, 0.4); color: #6ee7b7; }
+        .tag-group-4 { background-color: rgba(168, 85, 247, 0.15); border-color: rgba(168, 85, 247, 0.4); color: #d8b4fe; }
+        
+        .rating-bar { display: flex; height: 14px; border-radius: 9999px; overflow: hidden; margin-top: 0.5rem; background: rgba(255,255,255,0.05); }
+        .rating-bar > div { transition: width 1s ease-in-out; }
+        .rating-5 { background-color: #10b981; }
+        .rating-4 { background-color: #3b82f6; }
+        .rating-3 { background-color: #f59e0b; }
+        .rating-2 { background-color: #f97316; }
+        .rating-1 { background-color: #ef4444; }
+        
+        .svg-container {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 0.75rem;
+            padding: 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px dashed rgba(148, 163, 184, 0.2);
+        }
+        .svg-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 0.5rem;
+            background-color: rgba(255,255,255,0.95);
+            padding: 0.5rem;
+            transition: transform 0.3s ease;
+        }
+        .svg-container img:hover {
+            transform: scale(1.02);
+        }
+        
+        /* 滚动条美化 */
+        ::-webkit-scrollbar { width: 8px; height: 8px; }
+        ::-webkit-scrollbar-track { background: rgba(11, 18, 32, 0.5); }
+        ::-webkit-scrollbar-thumb { background: rgba(96, 165, 250, 0.3); border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: rgba(96, 165, 250, 0.5); }
+    </style>
+</head>
+<body class="p-4 md:p-8 min-h-screen">
+    <div class="max-w-6xl mx-auto space-y-6">
+        
+        <!-- Header -->
+        <div class="text-center py-8 relative">
+            <div class="absolute top-0 right-0 text-slate-500 text-sm opacity-50">数据驱动 · 洞察先行</div>
+            <h1 class="text-3xl md:text-4xl font-bold text-white tracking-wide mb-3">Pet Sling Carrier 购后评论洞察报告</h1>
+            <div class="inline-block bg-blue-900/30 border border-blue-500/30 rounded-full px-4 py-1 text-blue-300 text-sm">
+                <i class="fas fa-barcode mr-2"></i>ASIN: B07R4Z3MX7
+            </div>
+        </div>
+
+        <!-- 1. 数据概览 -->
+        <div class="card">
+            <div class="flex items-center mb-6 border-b border-slate-700/50 pb-3">
+                <i class="fas fa-chart-pie text-blue-400 text-2xl mr-3"></i>
+                <h2 class="text-2xl font-semibold text-slate-100">数据概览</h2>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+                <div class="bg-slate-800/60 p-5 rounded-xl text-center border border-slate-700 hover:bg-slate-700/50 transition">
+                    <div class="text-4xl font-bold text-blue-400">150</div>
+                    <div class="text-sm text-slate-400 mt-2">总评论数</div>
+                </div>
+                <div class="bg-slate-800/60 p-5 rounded-xl text-center border border-slate-700 hover:bg-slate-700/50 transition">
+                    <div class="text-4xl font-bold text-emerald-400">96</div>
+                    <div class="text-sm text-slate-400 mt-2">正面评价 (4-5星)</div>
+                </div>
+                <div class="bg-slate-800/60 p-5 rounded-xl text-center border border-slate-700 hover:bg-slate-700/50 transition">
+                    <div class="text-4xl font-bold text-red-400">54</div>
+                    <div class="text-sm text-slate-400 mt-2">负面评价 (1-3星)</div>
+                </div>
+                <div class="bg-slate-800/60 p-5 rounded-xl text-center border border-slate-700 hover:bg-slate-700/50 transition">
+                    <div class="text-4xl font-bold text-blue-400">64.0%</div>
+                    <div class="text-sm text-slate-400 mt-2">满意度</div>
+                </div>
+            </div>
+            
+            <div class="bg-slate-800/40 p-4 rounded-xl border border-slate-700/50">
+                <div class="flex justify-between text-sm text-slate-400 mb-1">
+                    <span>评分分布</span>
+                    <span class="text-xs opacity-70">5★ 71 | 4★ 25 | 3★ 23 | 2★ 20 | 1★ 11</span>
+                </div>
+                <div class="rating-bar">
+                    <div class="rating-5" style="width: 47.3%" title="5星: 71"></div>
+                    <div class="rating-4" style="width: 16.7%" title="4星: 25"></div>
+                    <div class="rating-3" style="width: 15.3%" title="3星: 23"></div>
+                    <div class="rating-2" style="width: 13.3%" title="2星: 20"></div>
+                    <div class="rating-1" style="width: 7.3%" title="1星: 11"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2. 高频标签分析 -->
+        <div class="card">
+            <div class="flex items-center mb-6 border-b border-slate-700/50 pb-3">
+                <i class="fas fa-tags text-blue-400 text-2xl mr-3"></i>
+                <h2 class="text-2xl font-semibold text-slate-100">高频标签分析</h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                    <h3 class="text-slate-300 mb-3 text-sm tracking-widest uppercase"><i class="fas fa-user-friends mr-2 opacity-50"></i>人群与场景</h3>
+                    <div class="flex flex-wrap">
+                        <span class="tag-pill tag-group-1">猫狗宠物<span class="tag-pill-count">118</span></span>
+                        <span class="tag-pill tag-group-1">小型宠物<span class="tag-pill-count">88</span></span>
+                        <span class="tag-pill tag-group-1">日常遛宠<span class="tag-pill-count">29</span></span>
+                        <span class="tag-pill tag-group-1">温和乖宠<span class="tag-pill-count">15</span></span>
+                        <span class="tag-pill tag-group-1">购物逛街<span class="tag-pill-count">12</span></span>
+                        <span class="tag-pill tag-group-1">旅行乘机<span class="tag-pill-count">10</span></span>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-slate-300 mb-3 text-sm tracking-widest uppercase"><i class="fas fa-cogs mr-2 opacity-50"></i>功能价值</h3>
+                    <div class="flex flex-wrap">
+                        <span class="tag-pill tag-group-2">透气网眼<span class="tag-pill-count">67</span></span>
+                        <span class="tag-pill tag-group-2">安全挂钩<span class="tag-pill-count">46</span></span>
+                        <span class="tag-pill tag-group-2">储物口袋<span class="tag-pill-count">33</span></span>
+                        <span class="tag-pill tag-group-2">内部空间<span class="tag-pill-count">17</span></span>
+                        <span class="tag-pill tag-group-2">反光设计<span class="tag-pill-count">16</span></span>
+                        <span class="tag-pill tag-group-2">开口设计<span class="tag-pill-count">15</span></span>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-slate-300 mb-3 text-sm tracking-widest uppercase"><i class="fas fa-shield-alt mr-2 opacity-50"></i>保障价值</h3>
+                    <div class="flex flex-wrap">
+                        <span class="tag-pill tag-group-3">体重匹配<span class="tag-pill-count">55</span></span>
+                        <span class="tag-pill tag-group-3">面料材质<span class="tag-pill-count">37</span></span>
+                        <span class="tag-pill tag-group-3">缝线工艺<span class="tag-pill-count">32</span></span>
+                        <span class="tag-pill tag-group-3">拉链质量<span class="tag-pill-count">16</span></span>
+                        <span class="tag-pill tag-group-3">材质触感<span class="tag-pill-count">14</span></span>
+                        <span class="tag-pill tag-group-3">尺码选择<span class="tag-pill-count">13</span></span>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-slate-300 mb-3 text-sm tracking-widest uppercase"><i class="fas fa-heart mr-2 opacity-50"></i>体验价值</h3>
+                    <div class="flex flex-wrap">
+                        <span class="tag-pill tag-group-4">乘坐舒适<span class="tag-pill-count">78</span></span>
+                        <span class="tag-pill tag-group-4">情绪状态<span class="tag-pill-count">64</span></span>
+                        <span class="tag-pill tag-group-4">肩带舒适<span class="tag-pill-count">50</span></span>
+                        <span class="tag-pill tag-group-4">调节便捷<span class="tag-pill-count">32</span></span>
+                        <span class="tag-pill tag-group-4">拉链顺滑<span class="tag-pill-count">10</span></span>
+                        <span class="tag-pill tag-group-4">受力分布<span class="tag-pill-count">9</span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3. 关键洞察 -->
+        <div class="card">
+            <div class="flex items-center mb-6 border-b border-slate-700/50 pb-3">
+                <i class="fas fa-lightbulb text-yellow-400 text-2xl mr-3"></i>
+                <h2 class="text-2xl font-semibold text-slate-100">关键洞察</h2>
+            </div>
+            
+            <div class="space-y-4">
+                <div class="bg-slate-800/40 p-4 rounded-xl border border-slate-700/30 flex items-start hover:bg-slate-700/30 transition">
+                    <div class="mt-1 mr-4 text-blue-400 text-xl"><i class="fas fa-balance-scale"></i></div>
+                    <div>
+                        <h4 class="font-medium text-slate-200 text-lg">产品能力两极化表现</h4>
+                        <p class="text-slate-400 mt-1 leading-relaxed">高评集中在<strong class="text-blue-300 font-normal">乘坐舒适</strong>与<strong class="text-blue-300 font-normal">情绪安抚</strong>；低评则聚焦于<strong class="text-red-300 font-normal">五金配件质量(安全挂钩、拉链)</strong>及<strong class="text-red-300 font-normal">空间开口设计缺陷</strong>。</p>
+                    </div>
+                </div>
+                
+                <div class="bg-slate-800/40 p-4 rounded-xl border border-slate-700/30 flex items-start hover:bg-slate-700/30 transition">
+                    <div class="mt-1 mr-4 text-emerald-400 text-xl"><i class="fas fa-users"></i></div>
+                    <div>
+                        <h4 class="font-medium text-slate-200 text-lg">核心用户群与诉求</h4>
+                        <p class="text-slate-400 mt-1 leading-relaxed">主要为中小型宠物主，核心场景为<strong class="text-emerald-300 font-normal">日常遛宠</strong>，强烈诉求是<strong class="text-emerald-300 font-normal">对胆小焦虑宠物的安抚作用</strong>，对体型匹配度极度敏感。</p>
+                    </div>
+                </div>
+                
+                <div class="bg-slate-800/40 p-4 rounded-xl border border-slate-700/30 flex items-start hover:bg-slate-700/30 transition">
+                    <div class="mt-1 mr-4 text-red-400 text-xl"><i class="fas fa-exclamation-triangle"></i></div>
+                    <div>
+                        <h4 class="font-medium text-slate-200 text-lg">安全隐患与硬件痛点</h4>
+                        <p class="text-slate-400 mt-1 leading-relaxed">最严重的痛点是<strong class="text-red-300 font-normal">安全挂钩断裂风险</strong>及<strong class="text-red-300 font-normal">网布易被抓破</strong>，缝线脱落也极易造成宠物掉落隐患。</p>
+                    </div>
+                </div>
+                
+                <div class="bg-slate-800/40 p-4 rounded-xl border border-slate-700/30 flex items-start hover:bg-slate-700/30 transition">
+                    <div class="mt-1 mr-4 text-purple-400 text-xl"><i class="fas fa-compress-arrows-alt"></i></div>
+                    <div>
+                        <h4 class="font-medium text-slate-200 text-lg">空间预期与穿脱门槛</h4>
+                        <p class="text-slate-400 mt-1 leading-relaxed">标注尺寸与实际有落差，<strong class="text-purple-300 font-normal">开口过窄导致宠物进出抗拒</strong>；且部分反馈<strong class="text-purple-300 font-normal">肩带缺乏缓冲、调节扣易滑</strong>导致背负不适。</p>
+                    </div>
+                </div>
+                
+                <div class="bg-slate-800/40 p-4 rounded-xl border border-slate-700/30 flex items-start hover:bg-slate-700/30 transition">
+                    <div class="mt-1 mr-4 text-yellow-400 text-xl"><i class="fas fa-star"></i></div>
+                    <div>
+                        <h4 class="font-medium text-slate-200 text-lg">高价值附加功能</h4>
+                        <p class="text-slate-400 mt-1 leading-relaxed"><strong class="text-yellow-300 font-normal">反光设计</strong>极大提升了夜间出行安全感，<strong class="text-yellow-300 font-normal">储物口袋</strong>增加了场景实用性，均是高频提及的惊喜卖点。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 4. 图表区 -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <div class="card flex flex-col">
+                <div class="flex items-center justify-between mb-4">
+                    <h3 class="text-lg font-medium text-slate-200"><i class="fas fa-star-half-alt text-blue-400 mr-2"></i>评分分布结构</h3>
+                </div>
+                <div class="svg-container flex-grow">
+                    <img src="rating_distribution.svg" alt="评分分布">
+                </div>
+            </div>
+            <div class="card flex flex-col">
+                <div class="flex items-center justify-between mb-4">
+                    <h3 class="text-lg font-medium text-slate-200"><i class="fas fa-chart-line text-blue-400 mr-2"></i>评价时间趋势</h3>
+                </div>
+                <div class="svg-container flex-grow">
+                    <img src="monthly_trend.svg" alt="时间趋势">
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="flex items-center justify-between mb-4">
+                <h3 class="text-lg font-medium text-slate-200"><i class="fas fa-chart-bar text-blue-400 mr-2"></i>高频标签分布</h3>
+            </div>
+            <div class="svg-container">
+                <img src="tag_top.svg" alt="高频标签" class="max-w-3xl w-full">
+            </div>
+        </div>
+
+        <!-- 5. 评论原声 -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- 好评原声 -->
+            <div class="card relative overflow-hidden">
+                <div class="absolute top-0 left-0 w-1 h-full bg-emerald-500"></div>
+                <div class="flex items-center mb-5">
+                    <i class="fas fa-thumbs-up text-emerald-400 text-xl mr-3"></i>
+                    <h2 class="text-xl font-semibold text-slate-100">优质好评聚类</h2>
+                </div>
+                <div class="space-y-4">
+                    <div class="bg-slate-800/60 p-4 rounded-lg border border-slate-700/50 hover:border-emerald-500/30 transition">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-sm font-medium text-emerald-400"><i class="fas fa-quote-left mr-2"></i>宠物情绪安抚</span>
+                        </div>
+                        <p class="text-sm text-slate-300 leading-relaxed">"My 8lb rescue terrier is very anxious and skittish. This sling has a calming effect — she burrows into the soft lining and feels secure."</p>
+                    </div>
+                    <div class="bg-slate-800/60 p-4 rounded-lg border border-slate-700/50 hover:border-emerald-500/30 transition">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-sm font-medium text-emerald-400"><i class="fas fa-quote-left mr-2"></i>出行便利性</span>
+                        </div>
+                        <p class="text-sm text-slate-300 leading-relaxed">"I take my 6lb Maltese to the grocery store, Target, and boutiques in this sling. Stores are much more welcoming when your dog is contained..."</p>
+                    </div>
+                    <div class="bg-slate-800/60 p-4 rounded-lg border border-slate-700/50 hover:border-emerald-500/30 transition">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-sm font-medium text-emerald-400"><i class="fas fa-quote-left mr-2"></i>安全与防逃脱</span>
+                        </div>
+                        <p class="text-sm text-slate-300 leading-relaxed">"I walk my dog early in the morning before sunrise and the reflective strip on this sling is incredibly bright in car headlights."</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 差评原声 -->
+            <div class="card relative overflow-hidden">
+                <div class="absolute top-0 left-0 w-1 h-full bg-red-500"></div>
+                <div class="flex items-center mb-5">
+                    <i class="fas fa-thumbs-down text-red-400 text-xl mr-3"></i>
+                    <h2 class="text-xl font-semibold text-slate-100">严重差评聚类</h2>
+                </div>
+                <div class="space-y-4">
+                    <div class="bg-slate-800/60 p-4 rounded-lg border border-slate-700/50 hover:border-red-500/30 transition">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-sm font-medium text-red-400"><i class="fas fa-quote-left mr-2"></i>安全隐患</span>
+                        </div>
+                        <p class="text-sm text-slate-300 leading-relaxed">"The safety hook that's supposed to secure your pet is made of cheap plastic and it snapped open while I was walking. My 7lb terrier fell out..."</p>
+                    </div>
+                    <div class="bg-slate-800/60 p-4 rounded-lg border border-slate-700/50 hover:border-red-500/30 transition">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-sm font-medium text-red-400"><i class="fas fa-quote-left mr-2"></i>做工与部件损坏</span>
+                        </div>
+                        <p class="text-sm text-slate-300 leading-relaxed">"The main zipper broke apart while I was zipping the pocket — the metal pull snapped off and a sharp edge... cut my 6lb chihuahua's ear."</p>
+                    </div>
+                    <div class="bg-slate-800/60 p-4 rounded-lg border border-slate-700/50 hover:border-red-500/30 transition">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-sm font-medium text-red-400"><i class="fas fa-quote-left mr-2"></i>空间拥挤</span>
+                        </div>
+                        <p class="text-sm text-slate-300 leading-relaxed">"The listing says 5-9 lbs but my 8lb dachshund barely fits. The internal space is so cramped she can't lie down..."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 6. 行动建议 -->
+        <div class="card bg-gradient-to-br from-[#2a3654] to-[#1e293b]">
+            <div class="flex items-center mb-6 border-b border-slate-700/50 pb-3">
+                <i class="fas fa-rocket text-blue-400 text-2xl mr-3"></i>
+                <h2 class="text-2xl font-semibold text-slate-100">行动建议</h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                <div class="bg-slate-800/40 p-5 rounded-xl border border-slate-700/50 shadow-inner">
+                    <div class="flex items-center mb-3">
+                        <div class="w-8 h-8 rounded-full bg-blue-500/20 flex items-center justify-center mr-3">
+                            <i class="fas fa-tools text-blue-400"></i>
+                        </div>
+                        <h3 class="font-medium text-slate-200 text-lg">产品优化</h3>
+                    </div>
+                    <ul class="text-sm text-slate-400 space-y-2 ml-11 list-disc list-outside">
+                        <li>更换塑料挂钩为<strong class="text-slate-300 font-normal">金属扣</strong>，采用高品质防脱拉链。</li>
+                        <li>采用<strong class="text-slate-300 font-normal">加厚防抓挠密织网布</strong>，关键受力点打枣加固。</li>
+                        <li><strong class="text-slate-300 font-normal">加宽开口设计</strong>，增加肩带海绵厚度及防滑调节扣。</li>
+                    </ul>
+                </div>
+                
+                <div class="bg-slate-800/40 p-5 rounded-xl border border-slate-700/50 shadow-inner">
+                    <div class="flex items-center mb-3">
+                        <div class="w-8 h-8 rounded-full bg-emerald-500/20 flex items-center justify-center mr-3">
+                            <i class="fas fa-book-open text-emerald-400"></i>
+                        </div>
+                        <h3 class="font-medium text-slate-200 text-lg">用户指南</h3>
+                    </div>
+                    <ul class="text-sm text-slate-400 space-y-2 ml-11 list-disc list-outside">
+                        <li>说明书增加<strong class="text-slate-300 font-normal">"宠物身长/胸围测量指南"</strong>。</li>
+                        <li>提供<strong class="text-slate-300 font-normal">"焦虑宠物适应教程"</strong>图文/视频。</li>
+                        <li>醒目位置提示<strong class="text-slate-300 font-normal">使用前检查安全扣</strong>及定期检查缝线。</li>
+                    </ul>
+                </div>
+                
+                <div class="bg-slate-800/40 p-5 rounded-xl border border-slate-700/50 shadow-inner">
+                    <div class="flex items-center mb-3">
+                        <div class="w-8 h-8 rounded-full bg-yellow-500/20 flex items-center justify-center mr-3">
+                            <i class="fas fa-bullhorn text-yellow-400"></i>
+                        </div>
+                        <h3 class="font-medium text-slate-200 text-lg">市场营销</h3>
+                    </div>
+                    <ul class="text-sm text-slate-400 space-y-2 ml-11 list-disc list-outside">
+                        <li>A+页面放大<strong class="text-slate-300 font-normal">"安抚焦虑"</strong>与<strong class="text-slate-300 font-normal">"反光安全"</strong>差异化卖点。</li>
+                        <li>针对旅行/购物场景展示<strong class="text-slate-300 font-normal">储物口袋便利性</strong>。</li>
+                        <li>QA区提前说明网布<strong class="text-slate-300 font-normal">防抓挠测试标准</strong>以管理预期。</li>
+                    </ul>
+                </div>
+                
+                <div class="bg-slate-800/40 p-5 rounded-xl border border-slate-700/50 shadow-inner">
+                    <div class="flex items-center mb-3">
+                        <div class="w-8 h-8 rounded-full bg-purple-500/20 flex items-center justify-center mr-3">
+                            <i class="fas fa-tags text-purple-400"></i>
+                        </div>
+                        <h3 class="font-medium text-slate-200 text-lg">价格策略</h3>
+                    </div>
+                    <ul class="text-sm text-slate-400 space-y-2 ml-11 list-disc list-outside">
+                        <li>规划<strong class="text-slate-300 font-normal">"Pro版"</strong>主打极致安全耐用，提价20-30%。</li>
+                        <li>基础版优化品控，附赠<strong class="text-slate-300 font-normal">安抚玩具/拾便袋</strong>提升性价比感知。</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

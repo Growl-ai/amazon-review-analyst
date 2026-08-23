@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="360" viewBox="0 0 900 360">
+<rect width="100%" height="100%" fill="white"/>
+<text x="54" y="28" font-size="18" font-family="sans-serif" fill="#111">月度正负评论趋势</text>
+<line x1="54" y1="318" x2="876" y2="318" stroke="#CBD5E1"/>
+<line x1="54" y1="52" x2="54" y2="318" stroke="#CBD5E1"/>
+<line x1="54" y1="318.0" x2="876" y2="318.0" stroke="#F1F5F9"/>
+<text x="46" y="322.0" text-anchor="end" font-size="11" font-family="sans-serif" fill="#64748B">0</text>
+<line x1="54" y1="251.5" x2="876" y2="251.5" stroke="#F1F5F9"/>
+<text x="46" y="255.5" text-anchor="end" font-size="11" font-family="sans-serif" fill="#64748B">2.5</text>
+<line x1="54" y1="185.0" x2="876" y2="185.0" stroke="#F1F5F9"/>
+<text x="46" y="189.0" text-anchor="end" font-size="11" font-family="sans-serif" fill="#64748B">5</text>
+<line x1="54" y1="118.5" x2="876" y2="118.5" stroke="#F1F5F9"/>
+<text x="46" y="122.5" text-anchor="end" font-size="11" font-family="sans-serif" fill="#64748B">7.5</text>
+<line x1="54" y1="52.0" x2="876" y2="52.0" stroke="#F1F5F9"/>
+<text x="46" y="56.0" text-anchor="end" font-size="11" font-family="sans-serif" fill="#64748B">10</text>
+<path d="M 54.00 238.20 L 112.71 238.20 L 171.43 185.00 L 230.14 131.80 L 288.86 105.20 L 347.57 238.20 L 406.29 185.00 L 465.00 78.60 L 523.71 78.60 L 582.43 105.20 L 641.14 131.80 L 699.86 78.60 L 758.57 78.60 L 817.29 211.60 L 876.00 131.80" fill="none" stroke="#4F8DF7" stroke-width="2.5"/>
+<circle cx="54.00" cy="238.20" r="3.2" fill="#4F8DF7"/>
+<circle cx="112.71" cy="238.20" r="3.2" fill="#4F8DF7"/>
+<circle cx="171.43" cy="185.00" r="3.2" fill="#4F8DF7"/>
+<circle cx="230.14" cy="131.80" r="3.2" fill="#4F8DF7"/>
+<circle cx="288.86" cy="105.20" r="3.2" fill="#4F8DF7"/>
+<circle cx="347.57" cy="238.20" r="3.2" fill="#4F8DF7"/>
+<circle cx="406.29" cy="185.00" r="3.2" fill="#4F8DF7"/>
+<circle cx="465.00" cy="78.60" r="3.2" fill="#4F8DF7"/>
+<circle cx="523.71" cy="78.60" r="3.2" fill="#4F8DF7"/>
+<circle cx="582.43" cy="105.20" r="3.2" fill="#4F8DF7"/>
+<circle cx="641.14" cy="131.80" r="3.2" fill="#4F8DF7"/>
+<circle cx="699.86" cy="78.60" r="3.2" fill="#4F8DF7"/>
+<circle cx="758.57" cy="78.60" r="3.2" fill="#4F8DF7"/>
+<circle cx="817.29" cy="211.60" r="3.2" fill="#4F8DF7"/>
+<circle cx="876.00" cy="131.80" r="3.2" fill="#4F8DF7"/>
+<text x="876" y="70" text-anchor="end" font-size="12" font-family="sans-serif" fill="#4F8DF7">正面(4-5星)</text>
+<path d="M 54.00 318.00 L 112.71 291.40 L 171.43 211.60 L 230.14 291.40 L 288.86 185.00 L 347.57 238.20 L 406.29 105.20 L 465.00 291.40 L 523.71 238.20 L 582.43 52.00 L 641.14 211.60 L 699.86 158.40 L 758.57 264.80 L 817.29 211.60 L 876.00 264.80" fill="none" stroke="#F97316" stroke-width="2.5"/>
+<circle cx="54.00" cy="318.00" r="3.2" fill="#F97316"/>
+<circle cx="112.71" cy="291.40" r="3.2" fill="#F97316"/>
+<circle cx="171.43" cy="211.60" r="3.2" fill="#F97316"/>
+<circle cx="230.14" cy="291.40" r="3.2" fill="#F97316"/>
+<circle cx="288.86" cy="185.00" r="3.2" fill="#F97316"/>
+<circle cx="347.57" cy="238.20" r="3.2" fill="#F97316"/>
+<circle cx="406.29" cy="105.20" r="3.2" fill="#F97316"/>
+<circle cx="465.00" cy="291.40" r="3.2" fill="#F97316"/>
+<circle cx="523.71" cy="238.20" r="3.2" fill="#F97316"/>
+<circle cx="582.43" cy="52.00" r="3.2" fill="#F97316"/>
+<circle cx="641.14" cy="211.60" r="3.2" fill="#F97316"/>
+<circle cx="699.86" cy="158.40" r="3.2" fill="#F97316"/>
+<circle cx="758.57" cy="264.80" r="3.2" fill="#F97316"/>
+<circle cx="817.29" cy="211.60" r="3.2" fill="#F97316"/>
+<circle cx="876.00" cy="264.80" r="3.2" fill="#F97316"/>
+<text x="876" y="86" text-anchor="end" font-size="12" font-family="sans-serif" fill="#F97316">负面(1-3星)</text>
+<text x="54.00" y="338" text-anchor="middle" font-size="11" font-family="sans-serif" fill="#64748B">2025-06</text>
+<text x="112.71" y="338" text-anchor="middle" font-size="11" font-family="sans-serif" fill="#64748B">2025-07</text>
+<text x="171.43" y="338" text-anchor="middle" font-size="11" font-family="sans-serif" fill="#64748B">2025-08</text>
+<text x="230.14" y="338" text-anchor="middle" font-size="11" font-family="sans-serif" fill="#64748B">2025-09</text>
+<text x="288.86" y="338" text-anchor="middle" font-size="11" font-family="sans-serif" fill="#64748B">2025-10</text>
+<text x="347.57" y="338" text-anchor="middle" font-size="11" font-family="sans-serif" fill="#64748B">2025-11</text>
+<text x="406.29" y="338" text-anchor="middle" font-size="11" font-family="sans-serif" fill="#64748B">2025-12</text>
+<text x="465.00" y="338" text-anchor="middle" font-size="11" font-family="sans-serif" fill="#64748B">2026-01</text>
+<text x="523.71" y="338" text-anchor="middle" font-size="11" font-family="sans-serif" fill="#64748B">2026-02</text>
+<text x="582.43" y="338" text-anchor="middle" font-size="11" font-family="sans-serif" fill="#64748B">2026-03</text>
+<text x="641.14" y="338" text-anchor="middle" font-size="11" font-family="sans-serif" fill="#64748B">2026-04</text>
+<text x="699.86" y="338" text-anchor="middle" font-size="11" font-family="sans-serif" fill="#64748B">2026-05</text>
+<text x="758.57" y="338" text-anchor="middle" font-size="11" font-family="sans-serif" fill="#64748B">2026-06</text>
+<text x="817.29" y="338" text-anchor="middle" font-size="11" font-family="sans-serif" fill="#64748B">2026-07</text>
+<text x="876.00" y="338" text-anchor="middle" font-size="11" font-family="sans-serif" fill="#64748B">2026-08</text>
+</svg>
