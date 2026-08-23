@@ -67,17 +67,32 @@ graph TD
 
 ---
 
-## 🚀 快速开始 (Quick Start)
+## 🚀 快速开始
 
-### 1. 环境准备
-确保已安装 Python 3.10+，安装项目依赖：
+### 环境要求
+- Python >= 3.11
+- 推荐使用 [uv](https://docs.astral.sh/uv/) 作为包管理器（安装速度极快）
+
+### 1. 克隆仓库
 ```bash
-# 在项目根目录执行
-pip install -r requirements.txt
-# 或者使用 pdm / poetry 等包管理工具
+git clone https://github.com/Growl-ai/amazon-review-analyst.git
+cd amazon-review-analyst
 ```
 
-### 2. 配置环境变量
+2. 安装依赖
+方式一：使用 uv（推荐，读取 uv.lock 锁定精确版本）
+```bash
+# 创建虚拟环境 + 安装全部依赖
+uv sync
+
+# 激活虚拟环境
+# Linux / Mac
+source .venv/bin/activate
+
+# Windows PowerShell
+.venv\Scripts\Activate.ps1
+```
+### 3. 配置环境变量
 在根目录创建 `.env` 文件，填入必要的 API Keys：
 ```env
 # LLM 接口配置 (默认使用阿里云 Dashscope)
@@ -92,7 +107,7 @@ FIRECRAWL_API_KEY=your_firecrawl_api_key
 TAGGING_MODE=sequential
 ```
 
-### 3. 运行工作流
+### 4. 运行工作流
 ```bash
 cd amazon-review-analyst
 python src/main.py

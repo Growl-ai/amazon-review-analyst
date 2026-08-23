@@ -1,0 +1,24 @@
+[project]
+name = "cbecommerce"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Growl-ai", email = "2177203476@qq.com" }
+]
+requires-python = ">=3.11"
+dependencies = [
+    "firecrawl-py>=4.38.0",
+    "langchain-community>=0.4.2",
+    "langchain-openai>=1.6.0",
+    "langgraph>=1.2.11",
+    "pandas>=3.0.5",
+    "python-dotenv>=1.2.3",
+]
+
+[project.scripts]
+cbecommerce = "cbecommerce:main"
+
+[build-system]
+requires = ["uv_build>=0.12.1,<0.13.0"]
+build-backend = "uv_build"
